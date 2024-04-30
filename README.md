@@ -1,6 +1,8 @@
+# Manjul Balayar and Devin Alamsya
+
 # MVC Calculator Application
 
-This document provides detailed instructions on how to deploy and use the MVC-based calculator application, developed by Manjul Balayar and Devin Alamsya. The application is structured using the Model-View-Controller (MVC) architecture to separate the logic, user interface, and control flow.
+This document provides detailed instructions on how to deploy and use the MVC-based calculator application. The application is structured using the Model-View-Controller (MVC) architecture to separate the logic, user interface, and control flow.
 
 ## Prerequisites
 
