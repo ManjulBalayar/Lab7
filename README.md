@@ -16,9 +16,11 @@ To deploy the calculator application, follow these steps:
 
 1. **Clone the Repository**
    - Use Git to clone the source repository from GitHub. Open your terminal and run the following command:
-   git clone https://github.com/ManjulBalayar/Lab7.git
-   cd Lab7
-
+     ```bash
+     git clone https://github.com/ManjulBalayar/Lab7.git
+     cd Lab7
+     ```
+     
 2. **Open the Project**
 - Open your IDE and import the project. Most IDEs have an option to open or import projects from the file system.
 
