@@ -1,8 +1,6 @@
-# Manjul Balayar and Devin Alamsya
-
 # MVC Calculator Application
 
-This document provides detailed instructions on how to deploy and use the MVC-based calculator application. The application is structured using the Model-View-Controller (MVC) architecture to separate the logic, user interface, and control flow.
+This document provides detailed instructions on how to deploy and use the MVC-based calculator application, developed by Manjul Balayar and Devin Alamsya. The application is structured using the Model-View-Controller (MVC) architecture to separate the logic, user interface, and control flow.
 
 ## Prerequisites
 
@@ -20,15 +18,23 @@ To deploy the calculator application, follow these steps:
      git clone https://github.com/ManjulBalayar/Lab7.git
      cd Lab7
      ```
-     
+
 2. **Open the Project**
-- Open your IDE and import the project. Most IDEs have an option to open or import projects from the file system.
+   - Open your IDE and import the project. Most IDEs have an option to open or import projects from the file system.
 
 3. **Build the Project**
-- Use your IDE’s build functionality to compile the project. This is often found under the "Build" menu.
+   - Use your IDE’s build functionality to compile the project. This is often found under the "Build" menu.
 
 4. **Run the Application**
-- Navigate to the `CalculatorMain` class, right-click on it, and select "Run" from the context menu. Alternatively, use the IDE's run configuration settings to start the application.
+   - Navigate to the `Calculator` class under the `calculator` package, right-click on it, and select "Run" from the context menu. Alternatively, use the IDE's run configuration settings to start the application.
+
+## Application Structure
+
+- **Packages and Classes**:
+  - `calculator.Calculator`: Contains the `main` method.
+  - `model.CalculatorModel`: Handles the logic for calculations and memory operations.
+  - `view.CalculatorView`: Manages the user interface.
+  - `controller.CalculatorController`: Handles user interaction, linking the view and model.
 
 ## Usage Instructions
 
@@ -51,16 +57,6 @@ Once the application is running, you can use the calculator to perform basic ari
 
 - **Square (x^2)**: Calculates the square of the current number.
 - **Square Root (Sqrt)**: Calculates the square root of the current number.
-
-## Contributing
-
-Contributions to enhance the calculator are welcome. Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
 
 ## License
 
