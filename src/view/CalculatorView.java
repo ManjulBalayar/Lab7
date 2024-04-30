@@ -54,11 +54,11 @@ public class CalculatorView extends JFrame {
         buttonPanel.add(decimalButton);
         buttonPanel.add(sqrtButton);
         buttonPanel.add(squareButton);
+        buttonPanel.add(deleteButton);
         buttonPanel.add(memoryAddButton);
         buttonPanel.add(memorySubtractButton);
         buttonPanel.add(memoryRecallButton);
         buttonPanel.add(memoryClearButton);
-        buttonPanel.add(deleteButton);
         buttonPanel.add(clearButton);
 
         add(buttonPanel, BorderLayout.CENTER);
