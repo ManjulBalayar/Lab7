@@ -1,56 +1,57 @@
 package model;
 
-import java.util.Observable;
-
-public class CalculatorModel extends Observable {
-    private double currentValue = 0.0;
+public class CalculatorModel {
     private double memory = 0.0;
 
-    public void performOperation(double value, String operator) {
-        switch (operator) {
-            case "+":
-                currentValue += value;
-                break;
-            case "-":
-                currentValue -= value;
-                break;
-            case "*":
-                currentValue *= value;
-                break;
-            case "/":
-                if (value == 0) {
-                    setChanged();
-                    notifyObservers("Error: Division by Zero");
-                    return;
-                }
-                currentValue /= value;
-                break;
-            case "sqrt":
-                currentValue = Math.sqrt(value);
-                break;
-            case "sqr":
-                currentValue = value * value;
-                break;
-            case "M+":
-                memory += currentValue;
-                break;
-            case "M-":
-                memory -= currentValue;
-                break;
-            case "MC":
-                memory = 0;
-                break;
-            case "MR":
-                currentValue = memory;
-                break;
+    public double calculate(double operand1, double operand2, String operator) {
+        try {
+            switch (operator) {
+                case "+": return operand1 + operand2;
+                case "-": return operand1 - operand2;
+                case "*": return operand1 * operand2;
+                case "/":
+                    if (operand2 == 0) throw new ArithmeticException("Cannot divide by zero.");
+                    return operand1 / operand2;
+                default: throw new IllegalArgumentException("Invalid operator.");
+            }
+        } catch (ArithmeticException e) {
+            // Log error or handle it as necessary
+            throw e; // Rethrowing to allow the controller to handle it
+        } catch (Exception e) {
+            // Catching any other unexpected errors
+            throw new RuntimeException("Error performing calculation: " + e.getMessage());
         }
-        setChanged();
-        notifyObservers(currentValue);
     }
 
-    public void clear() {
-        currentValue = 0.0;
-        setChanged();
-        notifyObservers(currentValue);
+    public void addToMemory(double value) {
+        try {
+            memory += value;
+        } catch (Exception e) {
+            throw new RuntimeException("Error adding to memory: " + e.getMessage());
+        }
+    }
+
+    public void subtractFromMemory(double value) {
+        try {
+            memory -= value;
+        } catch (Exception e) {
+            throw new RuntimeException("Error subtracting from memory: " + e.getMessage());
+        }
+    }
+
+    public double getMemory() {
+        try {
+            return memory;
+        } catch (Exception e) {
+            throw new RuntimeException("Error retrieving memory: " + e.getMessage());
+        }
+    }
+
+    public void clearMemory() {
+        try {
+            memory = 0.0;
+        } catch (Exception e) {
+            throw new RuntimeException("Error clearing memory: " + e.getMessage());
+        }
     }
 }
