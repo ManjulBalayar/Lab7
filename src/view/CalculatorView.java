@@ -34,7 +34,7 @@ public class CalculatorView extends JFrame {
         divideButton = new JButton("/");
         equalsButton = new JButton("=");
         decimalButton = new JButton(".");
-        clearButton = new JButton("AC");
+        clearButton = new JButton("C");
 
         memoryAddButton = new JButton("M+");
         memorySubtractButton = new JButton("M-");
