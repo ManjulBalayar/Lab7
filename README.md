@@ -46,7 +46,7 @@ Once the application is running, you can use the calculator to perform basic ari
 
 - **Basic Operations**: Use the numeric buttons (0-9) to enter numbers, and the operation buttons (+, -, *, /) to perform calculations.
 - **Calculate**: Press the "=" button to display the result of the calculation.
-- **Clear**: Press the "AC" button to clear the current input and start a new calculation.
+- **Clear**: Press the "C" button to clear the current input and start a new calculation.
 
 ### Using Memory Functions
 
